@@ -5,5 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(
     cardio
-    main.cpp
-    )
+        main.cpp player.cpp player.h game.cpp game.h bot.cpp bot.h)
