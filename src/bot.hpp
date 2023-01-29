@@ -6,7 +6,7 @@
 #define CARDIO_BOT_H
 
 
-#include "player.h"
+#include "player.hpp"
 
 class Bot : public Player {
 

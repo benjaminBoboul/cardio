@@ -7,17 +7,21 @@
 
 
 #include <array>
-#include "player.h"
+#include <vector>
+#include "player.hpp"
+#include "battle.hpp"
 
 class Game {
 private:
     std::array<Player*, 2> players = {};
+    std::vector<Battle*> battles = {};
 public:
     Game();
     ~Game();
 
     void addPlayer(int index, Player* p);
     Player* getPlayer(int index);
+    Battle* fight();
 };
 
 

@@ -1,24 +1,21 @@
-
-#include "player.h"
-#include "bot.h"
-#include "game.h"
+#include <cstdlib>
+#include "player.hpp"
+#include "bot.hpp"
+#include "game.hpp"
 
 int main()
 {
-    Player p1 = Player("John doe");
-    Bot b1 = Bot("Jane Doe");
-
-    printf("%s", p1.getName().c_str());
-    printf("%s", b1.getName().c_str());
-
-
     Game g = Game();
+    Bot b1 = Bot("John doe");
+    Bot b2 = Bot("Jane Doe");
 
     g.addPlayer(0, &b1);
-    g.addPlayer(1, &p1);
+    g.addPlayer(1, &b2);
 
-    Player* p2 = g.getPlayer(0);
-    printf("%s", p2->getName().c_str());
+    Player* p = g.getPlayer(0);
+    printf("%s", p->getName().c_str());
+
+    g.fight();
 
     return EXIT_SUCCESS;
 }

@@ -2,7 +2,7 @@
 // Created by benjamin on 19/01/23.
 //
 
-#include "player.h"
+#include "player.hpp"
 
 #include <utility>
 #include <sys/syslog.h>
@@ -18,6 +18,16 @@ Player::~Player() {
 
 std::string Player::getName() {
     return this->name;
+}
+
+void Player::setHealth(int health)
+{
+    this->health = health;
+}
+
+int Player::getHealth()
+{
+    return this->health;
 }
 
 Player::Player() = default;

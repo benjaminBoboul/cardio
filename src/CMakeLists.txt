@@ -1,8 +1,12 @@
-cmake_minimum_required(VERSION 3.22)
-
-project(cardio)
-set(CMAKE_CXX_STANDARD 14)
 
 add_executable(
-    cardio
-        main.cpp player.cpp player.h game.cpp game.h bot.cpp bot.h)
+    ${PROJECT_NAME}
+    src/main.cpp
+    src/player.cpp
+    src/player.hpp
+    src/game.cpp
+    src/game.hpp
+    src/battle.cpp
+    src/battle.hpp
+    src/bot.cpp
+    src/bot.hpp)

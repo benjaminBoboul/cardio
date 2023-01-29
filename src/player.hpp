@@ -5,17 +5,21 @@
 #ifndef CARDIO_PLAYER_H
 #define CARDIO_PLAYER_H
 
-#include <iostream>
+#include <string>
 
 class Player {
 protected:
     std::string name;
+    int health = 100;
+
 public:
     Player();
     Player(std::string name);
     ~Player();
 
     virtual std::string getName();
+    void setHealth(int health);
+    int getHealth();
 };
 
 
